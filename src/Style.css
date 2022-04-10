@@ -10,10 +10,12 @@
 }
 
 
+
+/* ================== App wrapper & container. ================== */
 .App-wrapper {
     display: flex;
     justify-content: center;
-    padding: 2rem 0;
+    padding: 3rem 0;
     background-color: var(--light-cyan);
 }
 
@@ -27,27 +29,22 @@
 }
 
 
-.padding {
-    padding: 1.9rem 1.5rem;
-}
 
-
-
-
-
-
+/* ================== Join container. ================== */
 .join-container {
     background-color: #ffffff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    padding: 2rem 1.8rem 2.5rem;
 }
 
 .join-container h1 {
     color: var(--cyan);
-    font-size: 20px;
+    font-size: 21px;
     font-weight: var(--fw-bold);
     letter-spacing: 0.5px;
 }
+
 .join-container h2 {
     color: var(--bright-yellow);
     font-weight: var(--fw-bold);
@@ -55,6 +52,7 @@
     margin: 1.5rem 0;
     line-height: 1.2;
 }
+
 .join-container p {
     color: var(--grayish-blue);
     font-size: 14px;
@@ -63,43 +61,40 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+/* ================== Subscription container. ================== */
 .subscription {
     background-color: #2bb3b1;
     color: #ffffff;
+    padding: 1.6rem 1.8rem;
 }
+
 .subscription h3 {
-    font-size: 18px;
+    font-size: 17.5px;
     font-weight: var(--fw-bold);
     letter-spacing: 1.2px;
 }
+
 .subscription h1 {
     display: flex;
     align-items: center;
-    font-size: 32px;
+    font-size: 30px;
     font-weight: var(--fw-bold);
-    margin: 1.5rem 0 0.8rem;
+    margin: 1.4rem 0 0.8rem;
 }
+
 .subscription h1 span{
-    font-size: 14px;
+    color: #cee0e1;
+    font-size: 13.5px;
     font-weight: var(--fw-regular);
     margin-left: 0.5rem;
     letter-spacing: 1px;
 }
+
 .subscription p {
     font-size: 15px;
     letter-spacing: 1px;
 }
+
 .subscription button {
     margin-top: 2rem;
     background-color: var(--bright-yellow);
@@ -107,9 +102,13 @@
     padding: 1rem 0;
     width: 100%;
     border-radius: 5px;
+    font-weight: var(--fw-bold);
+    letter-spacing: 1px;
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
+
 .subscription button:hover {
     background-color: #d4f057;
     color: #a9a9a9;
@@ -117,32 +116,29 @@
 
 
 
-
-
-
-
-
-
-
-
-
+/* ================== About container. ================== */
 .about {
     background-color: #4abebd;
     color: #ffffff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    padding: 1.6rem 1.8rem;
 }
+
 .about h4{
-    font-size: 17px;
+    font-size: 18px;
     font-weight: var(--fw-bold);
     letter-spacing: 1px;
 }
+
 .about p{
-    margin-top: 1rem;
-    font-size: 14px;
+    margin-top: 1.5rem;
+    color: #cee0e1;
+    font-size: 13px;
     line-height: 1.6;
     letter-spacing: 1px;
 }
+
 .about p span{
     display: block;
 }
@@ -151,48 +147,83 @@
 
 
 
-
+ /* ================== Media Q. ================== */
 @media (min-width: 768px) {
+    /* ================== App wrapper & container. ================== */
     .App-wrapper {
         padding: 0;
         align-items: center;
         height: 100vh;
     }
+
     .App-container {
-        max-width: 750px;
+        max-width: 800px;
     }
-    .padding {
-        padding: 2.3rem 2rem 2rem;
+
+
+
+    /* ================== Join container. ================== */
+    .join-container {
+        padding: 3rem;
     }
 
     .join-container h1 {
-        font-size: 22px;
-    }
-    .join-container h2 {
-        font-size: 17px;
-    }
-    .join-container p {
-        font-size: 15px;
+        font-size: 24px;
     }
 
+    .join-container h2 {
+        font-size: 18px;
+    }
+
+    .join-container p {
+        font-size: 16px;
+        font-weight: var(--fw-bold);
+        letter-spacing: 1px;
+    }
+
+
+
+
+    /* ================== Grid container. ================== */
     .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 
 
+
+    /* ================== Subscription container. ================== */
     .subscription {
         border-bottom-left-radius: 5px;
+        padding: 2rem 3rem;
     }
 
+    .subscription h3 {
+        font-size: 18px;
+    }
+
+    .subscription h1 {
+        font-size: 31px;
+    }
+
+    .subscription h1 span{
+        font-size: 14px;
+    }
+
+    .subscription p {
+        font-size: 16px;
+    }
+
+
+
+    /* ================== About container. ================== */
     .about {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 5px;
+        padding: 2rem 3rem;
     }
-}
 
-@media (min-width: 1000px) {
-    .App-container {
-        max-width: 900px;
+    .about p{
+        font-size: 14px;
     }
 }
